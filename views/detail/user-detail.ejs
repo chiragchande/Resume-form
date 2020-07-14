@@ -1,0 +1,36 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/detail.css">
+</head>
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+
+    <main>
+        <% if (prods.length > 0) { %>
+            <div class="grid">
+                <% for (let detail of prods) { %>
+                    <article class="card detail-item">
+                        <header class="card__header">
+                            <h1 class="detail-name"><%= detail.name %></h1>
+                        </header>
+                         <header class="card__header">
+                            <h1 class="detail-email"><%= detail.email %></h1>
+                        </header>
+                        <div class="card__image">
+                            <img src= "<%= detail.imageUrl %>" 
+                            alt="<%= detail.name %>">
+                        </div>
+                        <div class="card__content">
+                            <p class="detail-qualification"><%= detail.qualification %></p>
+                        </div>
+                        <div class="card__actions">
+                            <h4>Applied</h4>
+                        </div>
+                    </article>
+                <% } %>
+            </div>
+        <% } else { %>
+            <h1>No Detail Found!</h1>
+        <% } %>
+    </main>
+<%- include('../includes/end.ejs') %>

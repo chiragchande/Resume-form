@@ -1,0 +1,30 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/detail.css">
+</head>
+
+<body>
+   <%- include('../includes/navigation.ejs') %>
+
+    <main>
+        <form class="product-form" action="/admin/add-product" method="POST">
+            <div class="form-control">
+                <label for="name">Name</label>
+                <input type="name" name="name" id="name">
+            </div>
+            <div class="form-control">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="form-control">
+                <label for="imageUrl">Upload Resume</label>
+                <input type="imageUrl" name="imageUrl" id="imageUrl" placeholder="Upload resume link or google drive link">
+            </div>
+            <div class="form-control">
+                <label for="qualification">Qualification</label>
+                <textarea name="qualification" id="qualification" rows="5"></textarea>
+            </div>
+            <button class="btn" type="submit">Apply</button>
+        </form>
+    </main>
+<%- include('../includes/end.ejs') %>

@@ -1,0 +1,25 @@
+.product-form {
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+}
+
+.detail-item {
+    width: 30rem;
+    max-width: 100%;
+}
+
+.detail-name {
+    font-size: 1.2rem;
+    text-align: center; 
+}
+
+.detail-email {
+    text-align: center;
+    color: #4d4d4d;
+    margin-bottom: 0.5rem;
+}
+
+.detail-qualification {
+    text-align: center;
+}
